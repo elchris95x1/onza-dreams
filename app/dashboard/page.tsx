@@ -33,8 +33,8 @@ export default async function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-8 border-none md:p-6 lg:p-8">
+      <div>
         <h1 className="text-4xl font-extrabold tracking-tight text-foreground">
           Welcome to the Dashboard, {user.firstName || primaryEmail}!
         </h1>
