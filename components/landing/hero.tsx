@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { Show, SignUpButton } from '@clerk/nextjs';
 
 export function Hero() {
   return (
@@ -31,12 +32,21 @@ export function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Link 
-              href="/signup" 
-              className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-8 text-sm font-medium text-background shadow transition-colors hover:bg-foreground/90"
-            >
-              Start Creating for Free <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            <Show when="signed-out">
+              <SignUpButton mode="modal">
+                <button className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-8 text-sm font-medium text-background shadow transition-colors hover:bg-foreground/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+                  Start Creating for Free <ArrowRight className="ml-2 h-4 w-4" />
+                </button>
+              </SignUpButton>
+            </Show>
+            <Show when="signed-in">
+              <Link 
+                href="/dashboard" 
+                className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-8 text-sm font-medium text-background shadow transition-colors hover:bg-foreground/90"
+              >
+                Go to Dashboard <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Show>
             <Link
               href="#features"
               className="inline-flex h-12 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
