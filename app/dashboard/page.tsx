@@ -29,7 +29,7 @@ export default async function DashboardPage() {
     );
 
   if (error) {
-    console.error('Error syncing user to Supabase:', error);
+    console.error('Error syncing user to Supabase:', JSON.stringify(error, null, 2));
   }
 
   return (

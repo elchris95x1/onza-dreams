@@ -30,14 +30,10 @@ export function Navbar() {
         <div className="flex items-center gap-4">
           <Show when="signed-out">
             <SignInButton mode="modal">
-              <button className="hidden sm:inline-flex text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-                Sign In
-              </button>
+              <button className="hidden sm:inline-flex text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Sign In</button>
             </SignInButton>
             <SignUpButton mode="modal">
-              <button className="inline-flex h-9 items-center justify-center rounded-md bg-foreground px-4 py-2 text-sm font-medium text-background shadow transition-colors hover:bg-foreground/90">
-                Get Started
-              </button>
+              <button className="inline-flex h-9 items-center justify-center rounded-md bg-foreground px-4 py-2 text-sm font-medium text-background shadow transition-colors hover:bg-foreground/90">Get Started</button>
             </SignUpButton>
           </Show>
           <Show when="signed-in">
