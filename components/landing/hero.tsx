@@ -34,9 +34,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Show when="signed-out">
               <SignUpButton mode="modal">
-                <button className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-8 text-sm font-medium text-background shadow transition-colors hover:bg-foreground/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
-                  Start Creating for Free <ArrowRight className="ml-2 h-4 w-4" />
-                </button>
+                <button className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-8 text-sm font-medium text-background shadow transition-colors hover:bg-foreground/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">Start Creating for Free <ArrowRight className="ml-2 h-4 w-4" /></button>
               </SignUpButton>
             </Show>
             <Show when="signed-in">
