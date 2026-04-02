@@ -66,10 +66,12 @@ export function AppSidebar() {
           </div>
           <span className="font-bold text-lg tracking-tight">Onza Dreams</span>
         </div>
-        <Button className="w-full justify-start text-base font-semibold" size="lg">
-          <Plus className="mr-2 h-5 w-5" />
-          Create new series
-        </Button>
+        <Link href="/dashboard/create" className="block w-full">
+          <Button className="w-full justify-start text-base font-semibold" size="lg">
+            <Plus className="mr-2 h-5 w-5" />
+            Create new series
+          </Button>
+        </Link>
       </SidebarHeader>
 
       <SidebarContent>
